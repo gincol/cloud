@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: actuator-example
+    
+  profiles:
+    active: pro
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
