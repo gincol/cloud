@@ -4,7 +4,6 @@ server:
 spring:
   application:
     name: actuator-example
-    
   profiles:
     active: dev
     
@@ -13,3 +12,14 @@ management:
     web:
       exposure:
         include: '*'
+  endpoint:
+    shutdown:
+      enabled: true
+        
+info:
+  app:
+    name: '@project.artifactId@'
+    description: 'Ejemplo actuator'
+    version: '@project.version@'
+  java-vendor: ${java.specification.vendor}
+  java-version: ${java.specification.version}
